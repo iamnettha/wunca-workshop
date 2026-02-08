@@ -1,0 +1,93 @@
+# Prompt: Generate REST API for Book Management (.NET Core)
+
+## Objective
+Generate a RESTful API using **ASP.NET Core (.NET 7 or .NET 8)**  
+for managing **Book** data.
+
+The API should follow **clean architecture principles**, REST conventions, 
+and be suitable for enterprise-level development.
+
+---
+
+## Domain Description
+
+The system manages **Books** with the following information:
+
+### Book Entity
+- **Title** (string) – ชื่อเรื่องหนังสือ
+- **Description** (string) – รายละเอียดหนังสือ
+- **PublishDate** (DateTime) – วันที่เผยแพร่หรือวันที่บันทึก
+- **Attachments** (List of files) – รายการเอกสารแนบ (PDF, image, etc.)
+
+---
+
+## Functional Requirements
+
+### REST API Endpoints
+Implement the following endpoints:
+
+1. **Create Book**
+   - `POST /api/books`
+   - Accept book data and attachments (multipart/form-data)
+
+2. **Get All Books**
+   - `GET /api/books`
+
+3. **Get Book by Id**
+   - `GET /api/books/{id}`
+
+4. **Update Book**
+   - `PUT /api/books/{id}`
+
+5. **Delete Book**
+   - `DELETE /api/books/{id}`
+
+---
+
+## Technical Requirements
+
+### Technology Stack
+- ASP.NET Core Web API
+- Entity Framework Core
+- SQL Server or In-Memory Database
+- Swagger / OpenAPI enabled
+
+### Architecture
+- Controller
+- Service / Application Layer
+- Repository / Data Access Layer
+- DTOs for request and response models
+
+### Additional Requirements
+- Use proper HTTP status codes
+- Validate input data
+- Handle file upload for attachments
+- Store attachment metadata (file name, size, content type)
+- Use asynchronous programming (async/await)
+
+---
+
+## Output Expectations
+
+Generate:
+- Entity models
+- DTOs
+- DbContext
+- Repository interfaces & implementations
+- Service layer
+- Controller
+- Sample request/response JSON
+- Swagger configuration
+
+Code should be:
+- Clean
+- Readable
+- Well-structured
+- Ready to run
+
+---
+
+## Notes
+- Do NOT include authentication
+- Focus on core CRUD functionality
+- Use best practices for REST API design
